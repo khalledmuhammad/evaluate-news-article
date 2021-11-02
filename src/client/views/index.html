@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+       
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+            Articles analysis
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="URL" style="text-align: center;">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div style="font-size: 2em;line-height: 2rem ;display: flex;flex-direction: column; justify-content: center;align-items: center;">
+                    <div  id="results"></div>
+                    <div id="text"></div>
+                <div id="agreement"></div>
+                <div id="model"></div>
+                <div id="score_tag"></div>
+                <div id="subjectivity"></div>
+            </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+
+    </body>
+</html>
